@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    max-width: 100%;
+    color: black;
+    margin: 0 auto;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "header header"
+    "nav row"
+    "nav footer"
+    ;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+@media all and (max-width: 600px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "row"
+        "footer";
+    }
+}
+header{
+    grid-area: header;
+    background-image: url(mézeskalács_háttér.jpeg);
+    background-size: cover;
+    border: 3px black solid;
+}
+header h1{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 55px;
+    margin: 0 auto;
+    height: 200px;
+    text-shadow: 3px 3px 7px black;
+    color: beige;
+    font-size: 45px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+nav{
+    grid-area: nav;
+  text-align: center;
+  border-bottom: 3px black solid;
+  border-right: 3px black solid;
+  background-color: rgb(152, 123, 84);
+  background-image: url(hópehely_háttér.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav a{
+  padding: 4px;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(245, 245, 220);
+  font-weight: bold;
+  font-size: 35px;
+  text-shadow: 3px 3px 7px black;
+  border: 3px black solid;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0, 0.5);
+  
+}
+nav li{
+    list-style-type: none;
+    margin: 0px;
+    
+}
+nav a:hover{
+    background-color: black;
+}
+.row{
+    margin: 0 auto;
+    float: right;
+  width: 100%;
+  padding: 20px;
+  grid-area: row;
+}
+.row h3{
+    text-shadow: 3px 3px 7px beige;
+    font-weight: bold;
+}
+.row p{
+    font-size: 22.5px;
+}
+footer{
+    grid-area: footer;
+    border-top: black 3px solid;
+    border-bottom: black 3px solid; 
+}
+footer p{
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 7px beige;
+}
+nav ul{
+    margin: 0px;
+    padding: 0px;
+}
